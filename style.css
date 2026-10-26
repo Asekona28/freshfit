@@ -1,0 +1,288 @@
+
+/* FreshFit main styles */
+
+:root {
+  --green: #245c45;
+  --dark: #17251e;
+  --light-green: #eaf2ec;
+  --cream: #f8f7f2;
+  --white: #ffffff;
+  --text: #4c5750;
+  --border: #dce4dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 7%;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  color: var(--green);
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--green);
+}
+
+.hero {
+  min-height: 420px;
+  padding: 90px 8%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(120deg, #eaf2ec, #f8f7f2);
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin: 12px 0 20px;
+}
+
+h2 {
+  line-height: 1.25;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.section {
+  padding: 60px 7%;
+}
+
+.narrow {
+  max-width: 800px;
+  margin: auto;
+}
+
+.page-banner {
+  text-align: center;
+  padding: 65px 7%;
+  background: var(--light-green);
+}
+
+.page-banner h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background: #183f30;
+}
+
+.button-secondary {
+  background: #68766c;
+}
+
+.product-grid,
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.product-card,
+.review-card,
+.form-card,
+.basket-summary {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--white);
+}
+
+.product-card h2,
+.product-card h3 {
+  font-size: 1.2rem;
+}
+
+.product-visual {
+  min-height: 190px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--green);
+}
+
+.tee {
+  background: #e5e8e0;
+}
+
+.leggings {
+  background: #dce8e1;
+}
+
+.hoodie {
+  background: #eae5d9;
+}
+
+.price {
+  color: var(--green);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.newsletter {
+  text-align: center;
+  background: var(--cream);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 550px;
+  margin: 22px auto 0;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0 16px;
+  border: 1px solid #cbd5cc;
+  border-radius: 5px;
+  font: inherit;
+}
+
+.newsletter-form input {
+  flex: 1;
+  width: auto;
+  min-width: 220px;
+  margin: 0;
+}
+
+.newsletter-form button {
+  flex-shrink: 0;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card label {
+  font-weight: bold;
+}
+
+.form-card button {
+  align-self: flex-start;
+}
+
+.form-message {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.small-note {
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.basket-summary {
+  max-width: 650px;
+  margin: 45px auto 0;
+}
+
+.review-card .stars {
+  color: #b17a18;
+  letter-spacing: 3px;
+}
+
+footer {
+  padding: 24px 7%;
+  text-align: center;
+  color: var(--white);
+  background: var(--dark);
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 60px 7%;
+  }
+
+  .product-grid,
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 42px 6%;
+  }
+}

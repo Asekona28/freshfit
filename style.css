@@ -293,3 +293,48 @@ footer p {
     display: block;
     margin: auto;
 }
+
+/* Shopping Basket */
+
+#shopping-basket {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#shopping-basket h2 {
+    color: #205c46;
+}
+
+.basket-item {
+    padding: 10px;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.basket-item button {
+    background: #b83232;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.checkout-button {
+    background: #205c46;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-button:hover {
+    background: #164331;
+}
